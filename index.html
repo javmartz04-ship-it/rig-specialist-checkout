@@ -52,14 +52,17 @@ main{padding:56px 0 96px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 
 /* ===== left: checkout ===== */
-.h1{font-weight:700;font-size:clamp(34px,4.2vw,52px);line-height:1;letter-spacing:-.04em;margin-top:18px}
+.h1{font-weight:700;font-size:clamp(32px,3.5vw,48px);line-height:1.02;letter-spacing:-.04em;margin-top:18px}
 .h1 span{display:block}
-.sub{color:var(--t2);font-size:18px;margin-top:16px;max-width:500px}
+.sub{color:var(--t2);font-size:18px;margin-top:16px;max-width:520px}
+.sub b{color:var(--t1);font-weight:650}
 
 .form{margin-top:32px;background:#fff;border:2.5px solid var(--ink);border-radius:20px;box-shadow:7px 7px 0 var(--ink);padding:30px}
 .step{display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px;letter-spacing:-.02em}
 .step i{font-style:normal;width:28px;height:28px;border-radius:8px;background:var(--ink);color:var(--yellow);display:grid;place-items:center;font-family:var(--mono);font-size:12px}
 .step+.fields{margin-top:16px}
+.co{display:block;width:calc(100% + 24px);margin:14px -12px -12px;border:0;height:900px;background:#fff}
+@media (max-width:560px){.co{height:1010px}}
 .fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .fields .full{grid-column:1/-1}
 .sep{height:1.5px;background:var(--line-2);margin:26px 0}
@@ -117,6 +120,9 @@ input.bad{border-color:var(--red);background:#FDF3F2}
 .it .n{width:36px;height:36px;border:2px solid var(--ink);border-radius:10px;display:grid;place-items:center;font-family:var(--mono);font-size:12px;font-weight:700;box-shadow:2px 2px 0 var(--ink)}
 .it:nth-child(1) .n{background:var(--cream)}.it:nth-child(2) .n{background:var(--green)}.it:nth-child(3) .n{background:var(--pink)}.it:nth-child(4) .n{background:var(--blue)}.it:nth-child(5) .n{background:var(--goldt)}
 .it h3{font-size:17px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.chips span{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:#fff;border:1.5px solid var(--ink);border-radius:999px;padding:3px 9px}
+.bn.tot b{font-size:17px;letter-spacing:-.025em}
 .it p{font-size:14px;color:var(--t3);margin-top:3px;line-height:1.45}
 
 .bonus{margin:4px 20px 0;padding:18px 18px 8px;border:2px dashed var(--ink);border-radius:16px;background:var(--paper)}
@@ -140,6 +146,33 @@ input.bad{border-color:var(--red);background:#FDF3F2}
 .price .now b span{font-size:18px;letter-spacing:-.01em;color:rgba(255,255,255,.7)}
 .price .now em{display:block;font-style:normal;font-size:12.5px;color:rgba(255,255,255,.65);margin-top:4px}
 
+
+.tl{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.tl .val{margin-top:1px}
+.it.core .n{background:var(--yellow)!important;font-size:15px}
+.it.core h3{font-size:18px}
+.who{display:inline-flex;align-items:center;gap:10px;margin-top:10px;padding:5px 12px 5px 5px;border:1.5px solid var(--ink);border-radius:999px;background:var(--paper);font-size:13px;color:var(--t2)}
+.who img{width:30px;height:30px;border-radius:50%;object-fit:cover;border:1.5px solid var(--ink)}
+.who b{color:var(--t1)}
+.b5{margin:8px 20px 0;background:var(--ink);color:#fff;border-radius:18px;box-shadow:5px 5px 0 var(--yellow);overflow:hidden}
+.b5h{padding:20px 20px 16px;border-bottom:1px solid rgba(255,255,255,.12)}
+.b5 .tag{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--yellow);color:var(--ink);border-radius:6px;padding:4px 8px;margin-bottom:10px}
+.b5 h3{font-size:20px;font-weight:700;letter-spacing:-.03em;line-height:1.15}
+.b5 p{font-size:14px;color:rgba(255,255,255,.7);margin-top:6px}
+.val.y{background:var(--yellow)}
+.who.d{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.7)}
+.who.d img{border-color:#fff}
+.who.d b{color:#fff}
+.b5 ul{list-style:none;padding:8px 20px 14px}
+.b5 li{display:flex;gap:10px;padding:8px 0;font-size:14px;line-height:1.45;color:rgba(255,255,255,.72)}
+.b5 li b{color:#fff;font-weight:650}
+.b5 li svg{flex:none;width:18px;height:18px;margin-top:1px;stroke:var(--yellow);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.price{border:2.5px solid var(--ink);background:var(--cream);color:var(--ink)}
+.price .was{color:var(--t3)}
+.price .was s{color:var(--t3);font-size:18px}
+.price .now small{color:var(--gold)}
+.price .now b span{color:var(--t2)}
+.price .now em{color:var(--t2)}
 footer{border-top:1.5px solid var(--ink);padding:36px 0 48px;text-align:center}
 footer img{height:26px;width:auto;margin:0 auto;filter:brightness(0)}
 footer p{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--t4);margin-top:14px;line-height:1.8}
@@ -167,7 +200,8 @@ footer p{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-tran
   .badge{order:-1}
   .spec{padding:14px 20px}
   .spec .hand{display:none}
-  .bonus{margin-inline:14px;padding-inline:14px}
+  .b5{margin-inline:14px}
+  .tl{flex-direction:column;gap:6px}
   .price{margin:14px;flex-direction:column;align-items:flex-start}
   .price .now{text-align:left}
   .btn{font-size:17px}
@@ -189,81 +223,52 @@ footer p{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-tran
 
     <!-- ===== LEFT: checkout form ===== -->
     <section>
-      <span class="k">The GoHighLevel Specialist</span>
-      <h1 class="h1"><span>Get your dedicated</span><span><em class="mk">GoHighLevel Specialist.</em></span></h1>
-      <p class="sub">One specialist assigned to your account who builds, runs and fixes the machine behind your business, every month.</p>
+      <span class="k">The Marketing Machine · Full Package</span>
+      <h1 class="h1"><span>Everything from the webinar,</span><span><em class="mk">plus your own specialist.</em></span></h1>
+      <p class="sub">The community, every bonus, and a dedicated GoHighLevel specialist who builds it with you. <b>$300/month. Nothing up front. Cancel anytime.</b></p>
 
-      <form class="form" id="checkout" novalidate>
-        <div class="step"><i>1</i>Your Details</div>
-        <div class="fields">
-          <label><span>First name</span><input name="first_name" autocomplete="given-name" placeholder="Jane" required></label>
-          <label><span>Last name</span><input name="last_name" autocomplete="family-name" placeholder="Smith" required></label>
-          <label class="full"><span>Email</span><input name="email" type="email" autocomplete="email" placeholder="you@agency.com" required></label>
-          <label class="full"><span>Phone</span><input name="phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555" required></label>
-        </div>
-
-        <div class="sep"></div>
-
-        <div class="step"><i>2</i>Payment</div>
-        <div class="fields">
-          <label class="full card-in"><span>Card number</span><input name="card" inputmode="numeric" autocomplete="cc-number" placeholder="1234 1234 1234 1234" required>
-            <svg viewBox="0 0 24 16"><rect x="1" y="1" width="22" height="14" rx="2"/><path d="M1 5.5h22"/></svg></label>
-          <div class="three">
-            <label><span>Expiry</span><input name="exp" inputmode="numeric" autocomplete="cc-exp" placeholder="MM / YY" required></label>
-            <label><span>CVC</span><input name="cvc" inputmode="numeric" autocomplete="cc-csc" placeholder="123" required></label>
-            <label><span>ZIP</span><input name="zip" inputmode="numeric" autocomplete="postal-code" placeholder="78041" required></label>
-          </div>
-        </div>
-
-        <div class="total">
-          <div class="row"><span>The GoHighLevel Specialist</span><b>$300/mo</b></div>
-          <div class="row"><span>3 bonuses</span><b>Included</b></div>
-          <div class="row due"><span>Due today</span><b>$300.00</b></div>
-        </div>
-
-        <button class="btn" type="submit">Get My Specialist Now<span class="bi"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
-        <div class="fine">
-          <span><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Secure payment</span>
-          <span><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Cancel anytime</span>
-          <span><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>No contract</span>
-        </div>
-        <div class="msg" id="msg" role="status"></div>
-      </form>
+      <div class="form">
+        <div class="step"><i>$</i>Secure Checkout</div>
+        <iframe class="co" src="https://www.realinsurancecrm.com/check-out-page-991997" title="Secure checkout" loading="eager" allow="payment"></iframe>
+      </div>
     </section>
 
     <!-- ===== RIGHT: offer stack ===== -->
-    <aside class="stack" aria-label="What's included">
+    <aside class="stack" aria-label="Everything you get">
       <div class="hd">
-        <span class="k">What You Get</span>
-        <h2>A specialist assigned to you, <span class="nl">not a support inbox.</span></h2>
-        <p>They build your funnels, write your nurture, install your automations and run your back end every month.</p>
-        <div class="badge"><small>Assigned</small><b>To Your Account</b></div>
-      </div>
-
-      <div class="spec">
-        <img src="assets/christopher-avatar.jpg" alt="Christopher, GoHighLevel Specialist" width="240" height="240">
-        <div><b>Christopher</b><small>800+ webinar funnels · 1,000+ accounts</small></div>
-        <span class="hand">your specialist</span>
+        <span class="k">Everything You Get Today</span>
+        <h2>The community, every bonus, <span class="nl"><em class="mk">and your specialist.</em></span></h2>
+        <p>We teach you the Medicare marketing. We give you the software and the systems. And we give you the person who builds it.</p>
       </div>
 
       <div class="items">
-        <div class="it"><span class="n">01</span><div><h3>Your Dedicated GoHighLevel Specialist</h3><p>One person on your account, a direct line for fixes, a monthly strategy call and screen-share reviews.</p></div></div>
-        <div class="it"><span class="n">02</span><div><h3>High-Converting Funnels</h3><p>Lead-gen funnels, opt-in forms and booking calendars built, launched and optimized for Medicare agents.</p></div></div>
-        <div class="it"><span class="n">03</span><div><h3>Lead Nurture &amp; Automations</h3><p>Text and email sequences that book appointments, plus follow-up and no-show recovery that run without you.</p></div></div>
-        <div class="it"><span class="n">04</span><div><h3>Back-End Systems Managed For You</h3><p>Pipelines, tags, calendars and integrations kept clean, with regular checks so nothing breaks.</p></div></div>
-        <div class="it"><span class="n">05</span><div><h3>Cross-Sell &amp; Retention</h3><p>Dental, vision and final expense cross-sells, anniversary touches, referrals and old-lead reactivation.</p></div></div>
+        <div class="it core"><span class="n">★</span><div><div class="tl"><h3>Our Skool Group</h3><span class="val">$147/mo</span></div><p>Launch your first campaign: the community, the courses, live calls every business day, and the wins.</p></div></div>
+        <div class="it"><span class="n">01</span><div><div class="tl"><h3>Medicare Marketing Playbook</h3><span class="val">$3,000</span></div><p>Everything from the webinar, step by step: market, message, ads, funnel and backend.</p></div></div>
+        <div class="it"><span class="n">02</span><div><div class="tl"><h3>Your Real CRM Account</h3><span class="val">$97/mo</span></div><p>Every lead, text, call and booking in one place, with the follow-up firing on its own. You own the list.</p></div></div>
+        <div class="it"><span class="n">03</span><div><div class="tl"><h3>Done-For-You Onboarding With David</h3><span class="val">$1,000</span></div><p>Set up live with you on a 1:1 call: A2P approved so texts land, number, email and calendar connected.</p>
+          <div class="who"><img src="assets/david.jpg" alt="David, onboarding specialist" width="240" height="240"><span><b>David</b> · your onboarding specialist</span></div></div></div>
+        <div class="it"><span class="n">04</span><div><div class="tl"><h3>Medicare Automation Snapshots</h3><span class="val">$5,000</span></div><p>The webinar and lead gen funnels running right now, refined on $100,000+ of ad spend, loaded into your account with every text and email behind them.</p></div></div>
       </div>
 
-      <div class="bonus">
-        <span class="k">Take It On Today &amp; Get</span>
-        <div class="bn"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"/></svg><div><b>Webinar Automation That Converts</b><small>Launched in 1,000+ accounts</small></div><span class="val">$3,000 Value</span></div>
-        <div class="bn"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"/></svg><div><b>Speed-to-Lead Nurture Sequence</b></div><span class="val">$2,000 Value</span></div>
-        <div class="bn"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"/></svg><div><b>High-Converting Funnel, Built For You</b></div><span class="val inc">Included</span></div>
+      <div class="b5">
+        <div class="b5h">
+          <span class="tag">Bonus #5</span>
+          <div class="tl"><h3>Your Dedicated GoHighLevel Specialist</h3><span class="val y">$1,500/mo</span></div>
+          <p>Not a course. Not a ticket. A specialist attached to your business who builds it, runs it, and fixes it when it breaks.</p>
+          <div class="who d"><img src="assets/christopher-avatar.jpg" alt="Christopher, GoHighLevel Specialist" width="240" height="240"><span><b>Christopher</b> · 800+ webinar funnels · 1,000+ accounts</span></div>
+        </div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><b>Private Slack support channel.</b> Unlimited messages and voice notes, a reply within 3 business hours.</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><b>Monthly 1:1 consulting.</b> 60 minutes with the team that builds for 7 and 8-figure businesses.</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><b>Websites &amp; funnels that convert.</b> Built and branded to you, optimized every month.</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><b>Back-end systems.</b> Speed-to-lead, appointment reminders, no-show recovery, long-term nurture.</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><b>Cross-sell &amp; reactivation.</b> Dental, vision, final expense, referrals and old leads in your CRM.</span></li>
+        </ul>
       </div>
 
       <div class="price">
-        <div class="was">Typically<s>$1,000 / month</s></div>
-        <div class="now"><small>Your Investment</small><b>$300<span> / month</span></b><em>Cancel anytime</em></div>
+        <div class="was">Bought separately<s>$9,000 + $1,744/mo</s></div>
+        <div class="now"><small>Today, Everything</small><b>$300<span> / month</span></b><em>Nothing up front · No contract · Cancel anytime</em></div>
       </div>
     </aside>
 
@@ -277,24 +282,6 @@ footer p{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-tran
   </div>
 </footer>
 
-<script>
-/* Payment is not wired yet: this preview validates the fields and stops.
-   Swap the form for the GHL order form (or set CHECKOUT_URL) before going live. */
-const CHECKOUT_URL = '';
-const f = document.getElementById('checkout'), msg = document.getElementById('msg');
-f.addEventListener('submit', e => {
-  e.preventDefault();
-  let ok = true;
-  f.querySelectorAll('input[required]').forEach(i => {
-    const bad = !i.value.trim() || (i.type === 'email' && !/^\S+@\S+\.\S+$/.test(i.value));
-    i.classList.toggle('bad', bad); if (bad) ok = false;
-  });
-  msg.classList.add('on');
-  if (!ok) { msg.textContent = 'Please fill in every field.'; return; }
-  if (CHECKOUT_URL) { location.href = CHECKOUT_URL; return; }
-  msg.textContent = 'Preview only: payment is not connected yet.';
-});
-f.addEventListener('input', e => e.target.classList.remove('bad'));
-</script>
+
 </body>
 </html>
