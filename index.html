@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checkout | The GoHighLevel Specialist</title>
+<meta name="description" content="Secure checkout for The GoHighLevel Specialist: a dedicated specialist assigned to your account. $300/month, cancel anytime.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="assets/fonts/InterTight.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Inter Tight';src:url(assets/fonts/InterTight.woff2) format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Caveat';src:url(assets/fonts/Caveat.woff2) format('woff2');font-weight:400 700;font-display:swap}
+@font-face{font-family:'JetBrains Mono';src:url(assets/fonts/JetBrainsMono.woff2) format('woff2');font-weight:100 800;font-display:swap}
+
+/* ===== tokens: same as the live opt-in (Marketing Machine whiteboard register) ===== */
+:root{
+  --paper:#F6F5F1; --panel:#FFFFFF; --ink:#0B1220;
+  --t1:#0B1220; --t2:#36414F; --t3:#5D6878; --t4:#8B95A3;
+  --line:rgba(11,18,32,.16); --line-2:rgba(11,18,32,.09);
+  --gold:#A9790A; --yellow:#F2B92E; --hl:rgba(246,196,64,.78);
+  --pen:#1F56C4; --red:#E2433A;
+  --blue:#DCE8FB; --cream:#FCEFC4; --green:#DDF1DC; --pink:#F9DDE2; --goldt:#FBE7A8;
+  --sans:'Inter Tight',Inter,system-ui,-apple-system,sans-serif;
+  --hand:'Caveat','Bradley Hand',cursive;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--t1);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{width:min(1180px,100% - 48px);margin-inline:auto}
+
+.k{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px}
+.k::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 2px var(--ink)}
+em.mk{font-style:normal;padding:0 .1em;margin:0 -.04em;border-radius:.12em;-webkit-box-decoration-break:clone;box-decoration-break:clone;
+  background:linear-gradient(100deg,rgba(246,196,64,0) .5%,var(--hl) 2%,rgba(246,196,64,.62) 50%,var(--hl) 97%,rgba(246,196,64,0) 99.5%) 0 62%/0% 74% no-repeat;
+  animation:mk 1.1s var(--ease) .35s forwards}
+@keyframes mk{to{background-size:100% 74%}}
+.hand{font-family:var(--hand);font-weight:600;color:var(--pen);line-height:1.1}
+
+/* ===== top bar ===== */
+.top{border-bottom:1.5px solid var(--ink);background:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.top img{height:26px;width:auto;filter:brightness(0)}
+.secure{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--t2);font-weight:600}
+.secure svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ===== layout ===== */
+main{padding:56px 0 96px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+
+/* ===== left: checkout ===== */
+.h1{font-weight:700;font-size:clamp(34px,4.2vw,52px);line-height:1;letter-spacing:-.04em;margin-top:18px}
+.h1 span{display:block}
+.sub{color:var(--t2);font-size:18px;margin-top:16px;max-width:500px}
+
+.form{margin-top:32px;background:#fff;border:2.5px solid var(--ink);border-radius:20px;box-shadow:7px 7px 0 var(--ink);padding:30px}
+.step{display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px;letter-spacing:-.02em}
+.step i{font-style:normal;width:28px;height:28px;border-radius:8px;background:var(--ink);color:var(--yellow);display:grid;place-items:center;font-family:var(--mono);font-size:12px}
+.step+.fields{margin-top:16px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fields .full{grid-column:1/-1}
+.sep{height:1.5px;background:var(--line-2);margin:26px 0}
+label{display:block}
+label span{display:block;font-size:13px;font-weight:600;color:var(--t2);margin-bottom:6px}
+input{width:100%;font:inherit;font-size:16px;color:var(--t1);background:var(--paper);border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;outline:none;
+  transition:border-color .2s,box-shadow .2s,background .2s}
+input::placeholder{color:var(--t4)}
+input:focus{border-color:var(--ink);background:#fff;box-shadow:3px 3px 0 var(--ink)}
+input.bad{border-color:var(--red);background:#FDF3F2}
+.card-in{position:relative}
+.card-in svg{position:absolute;right:14px;bottom:15px;width:22px;height:16px;stroke:var(--t3);fill:none;stroke-width:1.8}
+.three{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+
+.total{margin-top:26px;border:1.5px dashed var(--line);border-radius:14px;padding:16px 18px}
+.total .row{display:flex;justify-content:space-between;gap:12px;font-size:15px;color:var(--t2)}
+.total .row+.row{margin-top:8px}
+.total .row.due{border-top:1.5px solid var(--line-2);padding-top:12px;margin-top:12px;color:var(--t1);font-weight:700;font-size:18px;letter-spacing:-.02em}
+.total .row b{font-variant-numeric:tabular-nums}
+
+.btn{width:100%;margin-top:22px;display:flex;align-items:center;justify-content:center;gap:12px;background:var(--yellow);color:var(--ink);font-weight:700;font-size:19px;letter-spacing:-.01em;
+  padding:18px 20px;border:2.5px solid var(--ink);border-radius:14px;box-shadow:5px 5px 0 var(--ink);
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.btn .bi{width:34px;height:34px;border-radius:9px;background:var(--ink);color:var(--yellow);display:grid;place-items:center;transition:transform .35s var(--ease)}
+.btn .bi svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)}
+.btn:hover .bi{transform:translateX(3px)}
+.btn:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--ink)}
+.btn:focus-visible{outline:3px solid var(--pen);outline-offset:4px}
+.fine{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--t3)}
+.fine span{display:inline-flex;align-items:center;gap:6px}
+.fine svg{width:13px;height:13px;stroke:var(--ink);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.msg{display:none;margin-top:16px;padding:12px 14px;border-radius:12px;background:var(--cream);border:1.5px solid var(--ink);font-size:14px;font-weight:600}
+.msg.on{display:block}
+
+/* ===== right: offer stack ===== */
+.stack{position:sticky;top:24px;background:#fff;border:2.5px solid var(--ink);border-radius:22px;box-shadow:9px 9px 0 var(--ink);overflow:hidden}
+.stack .hd{padding:26px 28px 22px;border-bottom:1.5px solid var(--ink);background:var(--blue);position:relative}
+.stack .hd h2{font-size:28px;font-weight:700;letter-spacing:-.035em;line-height:1.05;margin-top:10px}
+.stack .hd h2 .nl{display:block}
+.stack .hd p{color:var(--t2);font-size:15px;margin-top:8px;max-width:420px}
+.badge{position:absolute;right:20px;top:20px;transform:rotate(6deg);background:var(--ink);color:#fff;border-radius:12px;padding:8px 12px;text-align:center;box-shadow:4px 4px 0 var(--yellow)}
+.badge small{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow)}
+.badge b{display:block;font-size:13px;letter-spacing:-.01em;margin-top:1px}
+
+.spec{display:flex;align-items:center;gap:14px;padding:16px 28px;border-bottom:1.5px solid var(--line)}
+.spec img{width:48px;height:48px;border-radius:50%;border:2px solid var(--ink);object-fit:cover}
+.spec b{display:block;font-size:16px;letter-spacing:-.02em}
+.spec small{display:block;font-size:13.5px;color:var(--t3)}
+.spec .hand{margin-left:auto;font-size:22px;transform:rotate(-3deg);white-space:nowrap}
+
+.items{padding:6px 28px}
+.it{display:grid;grid-template-columns:36px 1fr;gap:14px;padding:16px 0;border-bottom:1.5px solid var(--line-2)}
+.it:last-child{border-bottom:0}
+.it .n{width:36px;height:36px;border:2px solid var(--ink);border-radius:10px;display:grid;place-items:center;font-family:var(--mono);font-size:12px;font-weight:700;box-shadow:2px 2px 0 var(--ink)}
+.it:nth-child(1) .n{background:var(--cream)}.it:nth-child(2) .n{background:var(--green)}.it:nth-child(3) .n{background:var(--pink)}.it:nth-child(4) .n{background:var(--blue)}.it:nth-child(5) .n{background:var(--goldt)}
+.it h3{font-size:17px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.it p{font-size:14px;color:var(--t3);margin-top:3px;line-height:1.45}
+
+.bonus{margin:4px 20px 0;padding:18px 18px 8px;border:2px dashed var(--ink);border-radius:16px;background:var(--paper)}
+.bonus .k{color:var(--t1)}
+.bonus .k::before{background:var(--red)}
+.bn{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1.5px solid var(--line-2)}
+.bn:last-child{border-bottom:0}
+.bn svg{flex:none;width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.bn div{flex:1;min-width:0}
+.bn b{display:block;font-size:15px;letter-spacing:-.015em}
+.bn small{display:block;font-size:12.5px;color:var(--t3)}
+.val{flex:none;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--ink);border-radius:999px;padding:4px 10px;background:#fff}
+.val.inc{background:var(--green)}
+
+.price{margin:20px;background:var(--ink);color:#fff;border-radius:16px;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.price .was{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.price .was s{display:block;font-family:var(--sans);font-size:20px;font-weight:700;letter-spacing:-.02em;color:rgba(255,255,255,.5);margin-top:2px;text-decoration-color:var(--red);text-decoration-thickness:2px}
+.price .now{text-align:right}
+.price .now small{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow)}
+.price .now b{display:block;font-size:40px;font-weight:700;letter-spacing:-.045em;line-height:1;margin-top:4px;font-variant-numeric:tabular-nums}
+.price .now b span{font-size:18px;letter-spacing:-.01em;color:rgba(255,255,255,.7)}
+.price .now em{display:block;font-style:normal;font-size:12.5px;color:rgba(255,255,255,.65);margin-top:4px}
+
+footer{border-top:1.5px solid var(--ink);padding:36px 0 48px;text-align:center}
+footer img{height:26px;width:auto;margin:0 auto;filter:brightness(0)}
+footer p{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--t4);margin-top:14px;line-height:1.8}
+
+@media (max-width:960px){
+  .grid{grid-template-columns:1fr;gap:44px}
+  .stack{position:static}
+}
+@media (max-width:560px){
+  .wrap{width:calc(100% - 32px)}
+  main{padding:36px 0 64px}
+  .top .wrap{height:60px}
+  .top img{height:22px}
+  .secure{font-size:10px;letter-spacing:.12em}
+  .form{padding:22px 18px;box-shadow:5px 5px 0 var(--ink)}
+  .fields{grid-template-columns:1fr}
+  .three{grid-template-columns:1fr 1fr}
+  .three label:last-child{grid-column:1/-1}
+  .stack{box-shadow:6px 6px 0 var(--ink)}
+  .stack .hd,.items{padding-left:20px;padding-right:20px}
+  .stack .hd h2{font-size:24px}
+  .stack .hd h2 .nl{display:inline}
+  .badge{position:static;display:inline-block;margin-bottom:14px;transform:rotate(-2deg)}
+  .stack .hd{display:flex;flex-direction:column;align-items:flex-start}
+  .badge{order:-1}
+  .spec{padding:14px 20px}
+  .spec .hand{display:none}
+  .bonus{margin-inline:14px;padding-inline:14px}
+  .price{margin:14px;flex-direction:column;align-items:flex-start}
+  .price .now{text-align:left}
+  .btn{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){em.mk{animation:none;background-size:100% 74%}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <img src="assets/logo.webp" alt="The Real Insurance Group" width="985" height="225">
+    <span class="secure"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Secure Checkout</span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap grid">
+
+    <!-- ===== LEFT: checkout form ===== -->
+    <section>
+      <span class="k">The GoHighLevel Specialist</span>
+      <h1 class="h1"><span>Get your dedicated</span><span><em class="mk">GoHighLevel Specialist.</em></span></h1>
+      <p class="sub">One specialist assigned to your account who builds, runs and fixes the machine behind your business, every month.</p>
+
+      <form class="form" id="checkout" novalidate>
+        <div class="step"><i>1</i>Your Details</div>
+        <div class="fields">
+          <label><span>First name</span><input name="first_name" autocomplete="given-name" placeholder="Jane" required></label>
+          <label><span>Last name</span><input name="last_name" autocomplete="family-name" placeholder="Smith" required></label>
+          <label class="full"><span>Email</span><input name="email" type="email" autocomplete="email" placeholder="you@agency.com" required></label>
+          <label class="full"><span>Phone</span><input name="phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555" required></label>
+        </div>
+
+        <div class="sep"></div>
+
+        <div class="step"><i>2</i>Payment</div>
+        <div class="fields">
+          <label class="full card-in"><span>Card number</span><input name="card" inputmode="numeric" autocomplete="cc-number" placeholder="1234 1234 1234 1234" required>
+            <svg viewBox="0 0 24 16"><rect x="1" y="1" width="22" height="14" rx="2"/><path d="M1 5.5h22"/></svg></label>
+          <div class="three">
+            <label><span>Expiry</span><input name="exp" inputmode="numeric" autocomplete="cc-exp" placeholder="MM / YY" required></label>
+            <label><span>CVC</span><input name="cvc" inputmode="numeric" autocomplete="cc-csc" placeholder="123" required></label>
+            <label><span>ZIP</span><input name="zip" inputmode="numeric" autocomplete="postal-code" placeholder="78041" required></label>
+          </div>
+        </div>
+
+        <div class="total">
+          <div class="row"><span>The GoHighLevel Specialist</span><b>$300/mo</b></div>
+          <div class="row"><span>3 bonuses</span><b>Included</b></div>
+          <div class="row due"><span>Due today</span><b>$300.00</b></div>
+        </div>
+
+        <button class="btn" type="submit">Get My Specialist Now<span class="bi"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <div class="fine">
+          <span><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Secure payment</span>
+          <span><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Cancel anytime</span>
+          <span><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>No contract</span>
+        </div>
+        <div class="msg" id="msg" role="status"></div>
+      </form>
+    </section>
+
+    <!-- ===== RIGHT: offer stack ===== -->
+    <aside class="stack" aria-label="What's included">
+      <div class="hd">
+        <span class="k">What You Get</span>
+        <h2>A specialist assigned to you, <span class="nl">not a support inbox.</span></h2>
+        <p>They build your funnels, write your nurture, install your automations and run your back end every month.</p>
+        <div class="badge"><small>Assigned</small><b>To Your Account</b></div>
+      </div>
+
+      <div class="spec">
+        <img src="assets/christopher-avatar.jpg" alt="Christopher, GoHighLevel Specialist" width="240" height="240">
+        <div><b>Christopher</b><small>800+ webinar funnels · 1,000+ accounts</small></div>
+        <span class="hand">your specialist</span>
+      </div>
+
+      <div class="items">
+        <div class="it"><span class="n">01</span><div><h3>Your Dedicated GoHighLevel Specialist</h3><p>One person on your account, a direct line for fixes, a monthly strategy call and screen-share reviews.</p></div></div>
+        <div class="it"><span class="n">02</span><div><h3>High-Converting Funnels</h3><p>Lead-gen funnels, opt-in forms and booking calendars built, launched and optimized for Medicare agents.</p></div></div>
+        <div class="it"><span class="n">03</span><div><h3>Lead Nurture &amp; Automations</h3><p>Text and email sequences that book appointments, plus follow-up and no-show recovery that run without you.</p></div></div>
+        <div class="it"><span class="n">04</span><div><h3>Back-End Systems Managed For You</h3><p>Pipelines, tags, calendars and integrations kept clean, with regular checks so nothing breaks.</p></div></div>
+        <div class="it"><span class="n">05</span><div><h3>Cross-Sell &amp; Retention</h3><p>Dental, vision and final expense cross-sells, anniversary touches, referrals and old-lead reactivation.</p></div></div>
+      </div>
+
+      <div class="bonus">
+        <span class="k">Take It On Today &amp; Get</span>
+        <div class="bn"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"/></svg><div><b>Webinar Automation That Converts</b><small>Launched in 1,000+ accounts</small></div><span class="val">$3,000 Value</span></div>
+        <div class="bn"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"/></svg><div><b>Speed-to-Lead Nurture Sequence</b></div><span class="val">$2,000 Value</span></div>
+        <div class="bn"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"/></svg><div><b>High-Converting Funnel, Built For You</b></div><span class="val inc">Included</span></div>
+      </div>
+
+      <div class="price">
+        <div class="was">Typically<s>$1,000 / month</s></div>
+        <div class="now"><small>Your Investment</small><b>$300<span> / month</span></b><em>Cancel anytime</em></div>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo.webp" alt="The Real Insurance Group" width="985" height="225">
+    <p>&copy; 2026 The Real Insurance Group. All rights reserved.<br>Not connected with or endorsed by the United States government or the federal Medicare program.</p>
+  </div>
+</footer>
+
+<script>
+/* Payment is not wired yet: this preview validates the fields and stops.
+   Swap the form for the GHL order form (or set CHECKOUT_URL) before going live. */
+const CHECKOUT_URL = '';
+const f = document.getElementById('checkout'), msg = document.getElementById('msg');
+f.addEventListener('submit', e => {
+  e.preventDefault();
+  let ok = true;
+  f.querySelectorAll('input[required]').forEach(i => {
+    const bad = !i.value.trim() || (i.type === 'email' && !/^\S+@\S+\.\S+$/.test(i.value));
+    i.classList.toggle('bad', bad); if (bad) ok = false;
+  });
+  msg.classList.add('on');
+  if (!ok) { msg.textContent = 'Please fill in every field.'; return; }
+  if (CHECKOUT_URL) { location.href = CHECKOUT_URL; return; }
+  msg.textContent = 'Preview only: payment is not connected yet.';
+});
+f.addEventListener('input', e => e.target.classList.remove('bad'));
+</script>
+</body>
+</html>
