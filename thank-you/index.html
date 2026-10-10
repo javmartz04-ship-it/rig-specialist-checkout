@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>You're In | The Marketing Machine</title>
+<meta name="robots" content="noindex">
+<link rel="preload" href="../assets/fonts/InterTight.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Inter Tight';src:url(../assets/fonts/InterTight.woff2) format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Caveat';src:url(../assets/fonts/Caveat.woff2) format('woff2');font-weight:400 700;font-display:swap}
+@font-face{font-family:'JetBrains Mono';src:url(../assets/fonts/JetBrainsMono.woff2) format('woff2');font-weight:100 800;font-display:swap}
+
+/* ===== tokens: same as the checkout + live opt-in ===== */
+:root{
+  --paper:#F6F5F1; --ink:#0B1220;
+  --t1:#0B1220; --t2:#36414F; --t3:#5D6878; --t4:#8B95A3;
+  --line:rgba(11,18,32,.16); --line-2:rgba(11,18,32,.09);
+  --gold:#A9790A; --yellow:#F2B92E; --hl:rgba(246,196,64,.78);
+  --pen:#1F56C4;
+  --blue:#DCE8FB; --cream:#FCEFC4; --green:#DDF1DC; --pink:#F9DDE2;
+  --sans:'Inter Tight',Inter,system-ui,-apple-system,sans-serif;
+  --hand:'Caveat','Bradley Hand',cursive;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--t1);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+.wrap{width:min(760px,100% - 48px);margin-inline:auto}
+
+.k{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px}
+.k::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 2px var(--ink)}
+em.mk{font-style:normal;padding:0 .1em;margin:0 -.04em;border-radius:.12em;-webkit-box-decoration-break:clone;box-decoration-break:clone;
+  background:linear-gradient(100deg,rgba(246,196,64,0) .5%,var(--hl) 2%,rgba(246,196,64,.62) 50%,var(--hl) 97%,rgba(246,196,64,0) 99.5%) 0 62%/0% 74% no-repeat;
+  animation:mk 1.1s var(--ease) .35s forwards}
+@keyframes mk{to{background-size:100% 74%}}
+.hand{font-family:var(--hand);font-weight:600;color:var(--pen);line-height:1.1}
+
+/* top bar */
+.top{border-bottom:1.5px solid var(--ink);background:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:center;height:68px}
+.top img{height:26px;width:auto;filter:brightness(0)}
+
+/* confirmation strip */
+.ok{background:var(--green);border-bottom:1.5px solid var(--ink)}
+.ok .wrap{display:flex;align-items:center;justify-content:center;gap:10px;padding:12px 0;font-weight:600;font-size:15px;text-align:center}
+.ok svg{flex:none;width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* hero */
+main{padding:64px 0 96px}
+.hero{text-align:center}
+.h1{font-weight:700;font-size:clamp(38px,6vw,64px);line-height:1;letter-spacing:-.045em;margin-top:18px}
+.h1 span{display:block}
+.sub{color:var(--t2);font-size:19px;margin:18px auto 0;max-width:560px}
+
+/* steps */
+.steps{margin-top:48px;background:#fff;border:2.5px solid var(--ink);border-radius:20px;box-shadow:7px 7px 0 var(--ink);overflow:hidden}
+.steps .hd{padding:18px 26px;border-bottom:1.5px solid var(--ink);background:var(--blue);font-weight:700;font-size:18px;letter-spacing:-.02em}
+.st{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:24px 26px;border-bottom:1.5px solid var(--line-2)}
+.st:last-child{border-bottom:0}
+.st .n{width:44px;height:44px;border:2px solid var(--ink);border-radius:12px;display:grid;place-items:center;font-family:var(--mono);font-size:14px;font-weight:700;box-shadow:2px 2px 0 var(--ink)}
+.st:nth-child(2) .n{background:var(--cream)}.st:nth-child(3) .n{background:var(--green)}.st:nth-child(4) .n{background:var(--pink)}
+.st h2{font-size:21px;font-weight:700;letter-spacing:-.025em;line-height:1.2;padding-top:2px}
+.st p{color:var(--t2);margin-top:6px}
+.who{display:inline-flex;align-items:center;gap:10px;margin-top:12px;padding:5px 14px 5px 5px;border:1.5px solid var(--ink);border-radius:999px;background:var(--paper);font-size:13.5px;color:var(--t2)}
+.who img{width:32px;height:32px;border-radius:50%;object-fit:cover;border:1.5px solid var(--ink)}
+.who b{color:var(--t1)}
+
+.btn{display:inline-flex;align-items:center;gap:12px;margin-top:16px;background:var(--yellow);color:var(--ink);font-weight:700;font-size:17px;letter-spacing:-.01em;text-decoration:none;
+  padding:13px 14px 13px 22px;border:2.5px solid var(--ink);border-radius:13px;box-shadow:4px 4px 0 var(--ink);
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.btn .bi{width:30px;height:30px;border-radius:8px;background:var(--ink);color:var(--yellow);display:grid;place-items:center;transition:transform .35s var(--ease)}
+.btn .bi svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn:hover .bi{transform:translateX(3px)}
+.btn:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--ink)}
+.btn:focus-visible{outline:3px solid var(--pen);outline-offset:4px}
+
+.note{text-align:center;margin-top:44px}
+.note .hand{font-size:30px;transform:rotate(-2deg);display:inline-block}
+.note p{color:var(--t3);font-size:15px;margin-top:10px}
+
+footer{border-top:1.5px solid var(--ink);padding:36px 0 48px;text-align:center}
+footer img{height:26px;width:auto;margin:0 auto;filter:brightness(0)}
+footer p{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--t4);margin-top:14px;line-height:1.8}
+
+@media (max-width:560px){
+  .wrap{width:calc(100% - 32px)}
+  main{padding:44px 0 64px}
+  .sub{font-size:17px}
+  .steps{box-shadow:5px 5px 0 var(--ink)}
+  .steps .hd{padding:16px 18px}
+  .st{grid-template-columns:1fr;gap:12px;padding:22px 18px}
+  .btn{width:100%;justify-content:space-between}
+}
+@media (prefers-reduced-motion:reduce){em.mk{animation:none;background-size:100% 74%}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap"><img src="../assets/logo.webp" alt="The Real Insurance Group" width="985" height="225"></div>
+</header>
+
+<div class="ok"><div class="wrap"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Payment confirmed. Your full package is unlocked.</div></div>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <span class="k">The Marketing Machine · Full Package</span>
+      <h1 class="h1"><span>You're in.</span><span><em class="mk">Let's build your machine.</em></span></h1>
+      <p class="sub">The community, every bonus, and your GoHighLevel specialist. Here are your next three steps.</p>
+    </section>
+
+    <section class="steps" aria-label="Next steps">
+      <div class="hd">What Happens Next</div>
+
+      <div class="st"><span class="n">01</span><div>
+        <h2>Check your email</h2>
+        <p>Your receipt and your login details are on the way. If you don't see them in a few minutes, check spam or promotions.</p>
+      </div></div>
+
+      <div class="st"><span class="n">02</span><div>
+        <h2>Book your onboarding call with David</h2>
+        <p>One-on-one and live: he sets up your account with you, gets you A2P approved, and connects your number, email and calendar.</p>
+        <div class="who"><img src="../assets/david.jpg" alt="David, onboarding specialist" width="240" height="240"><span><b>David</b> · your onboarding specialist</span></div><br>
+        <a class="btn" id="book" href="#">Book My Onboarding Call<span class="bi"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      </div></div>
+
+      <div class="st"><span class="n">03</span><div>
+        <h2>Join the Skool group</h2>
+        <p>The community, the courses, the Medicare Marketing Playbook, and live calls every business day.</p>
+        <a class="btn" id="skool" href="#">Join The Skool Group<span class="bi"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      </div></div>
+    </section>
+
+    <div class="note">
+      <span class="hand">Your specialist takes it from there.</span>
+      <p>Once you're set up, Christopher builds your funnels, automations and back end with you.</p>
+      <div class="who"><img src="../assets/christopher-avatar.jpg" alt="Christopher, GoHighLevel Specialist" width="240" height="240"><span><b>Christopher</b> · your GoHighLevel specialist</span></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="../assets/logo.webp" alt="The Real Insurance Group" width="985" height="225">
+    <p>&copy; 2026 The Real Insurance Group. All rights reserved.<br>Not connected with or endorsed by the United States government or the federal Medicare program.</p>
+  </div>
+</footer>
+
+<script>
+/* Fill these in before going live. Empty = the button stays on this page. */
+const LINKS = { book: '', skool: '' };
+for (const [id, url] of Object.entries(LINKS)) if (url) { const a = document.getElementById(id); a.href = url; a.target = '_blank'; a.rel = 'noopener'; }
+</script>
+</body>
+</html>
