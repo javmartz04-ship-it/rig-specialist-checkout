@@ -68,15 +68,8 @@ main{padding:64px 0 96px}
 .who img{width:32px;height:32px;border-radius:50%;object-fit:cover;border:1.5px solid var(--ink)}
 .who b{color:var(--t1)}
 
-.btn{display:inline-flex;align-items:center;gap:12px;margin-top:16px;background:var(--yellow);color:var(--ink);font-weight:700;font-size:17px;letter-spacing:-.01em;text-decoration:none;
   padding:13px 14px 13px 22px;border:2.5px solid var(--ink);border-radius:13px;box-shadow:4px 4px 0 var(--ink);
   transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
-.btn .bi{width:30px;height:30px;border-radius:8px;background:var(--ink);color:var(--yellow);display:grid;place-items:center;transition:transform .35s var(--ease)}
-.btn .bi svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
-.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
-.btn:hover .bi{transform:translateX(3px)}
-.btn:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--ink)}
-.btn:focus-visible{outline:3px solid var(--pen);outline-offset:4px}
 
 .note{text-align:center;margin-top:44px}
 .note .hand{font-size:30px;transform:rotate(-2deg);display:inline-block}
@@ -93,7 +86,6 @@ footer p{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-tran
   .steps{box-shadow:5px 5px 0 var(--ink)}
   .steps .hd{padding:16px 18px}
   .st{grid-template-columns:1fr;gap:12px;padding:22px 18px}
-  .btn{width:100%;justify-content:space-between}
 }
 @media (prefers-reduced-motion:reduce){em.mk{animation:none;background-size:100% 74%}*{transition:none!important}}
 </style>
@@ -111,7 +103,7 @@ footer p{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-tran
     <section class="hero">
       <span class="k">The Marketing Machine · Full Package</span>
       <h1 class="h1"><span>You're in.</span><span><em class="mk">Let's build your machine.</em></span></h1>
-      <p class="sub">The community, every bonus, and your GoHighLevel specialist. Here are your next three steps.</p>
+      <p class="sub">The community, every bonus, and your GoHighLevel specialist. Here's what happens next.</p>
     </section>
 
     <section class="steps" aria-label="Next steps">
@@ -123,16 +115,14 @@ footer p{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-tran
       </div></div>
 
       <div class="st"><span class="n">02</span><div>
-        <h2>Book your onboarding call with David</h2>
+        <h2>Your onboarding call with David</h2>
         <p>One-on-one and live: he sets up your account with you, gets you A2P approved, and connects your number, email and calendar.</p>
-        <div class="who"><img src="../assets/david.jpg" alt="David, onboarding specialist" width="240" height="240"><span><b>David</b> · your onboarding specialist</span></div><br>
-        <a class="btn" id="book" href="#">Book My Onboarding Call<span class="bi"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <div class="who"><img src="../assets/david.jpg" alt="David, onboarding specialist" width="240" height="240"><span><b>David</b> · your onboarding specialist</span></div>
       </div></div>
 
       <div class="st"><span class="n">03</span><div>
         <h2>Join the Skool group</h2>
         <p>The community, the courses, the Medicare Marketing Playbook, and live calls every business day.</p>
-        <a class="btn" id="skool" href="#">Join The Skool Group<span class="bi"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
       </div></div>
     </section>
 
@@ -151,10 +141,5 @@ footer p{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-tran
   </div>
 </footer>
 
-<script>
-/* Fill these in before going live. Empty = the button stays on this page. */
-const LINKS = { book: '', skool: '' };
-for (const [id, url] of Object.entries(LINKS)) if (url) { const a = document.getElementById(id); a.href = url; a.target = '_blank'; a.rel = 'noopener'; }
-</script>
 </body>
 </html>

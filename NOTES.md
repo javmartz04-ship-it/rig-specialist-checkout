@@ -46,6 +46,6 @@ live-webinar claim).
 ## Thank-you page (2026-10-10)
 `thank-you/index.html`, same repo, live at /rig-specialist-checkout/thank-you/. Simple post-purchase page:
 green "Payment confirmed" strip → "You're in. / Let's build your machine." → 3 steps (check email,
-book onboarding with David, join the Skool group) → Christopher handoff line. Button URLs live in
-`LINKS` at the bottom of the file and are empty: need David's booking link and the Skool invite link.
+onboarding call with David, join the Skool group) → Christopher handoff line. No buttons:
+Javier asked for a simple page with the buttons taken out.
 Assumed: login details arrive by email; Christopher takes over after onboarding.
